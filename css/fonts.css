@@ -1,0 +1,46 @@
+@import url("https://fonts.cdnfonts.com/css/fruit-punch-2");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+@import url("//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bangers&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bangers&family=Chewy&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Bangers&family=Chewy&family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "BMJUA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DungGeunMo";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LOTTERIACHAB";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Fruit Punch Regular";
+  src: url("fruit-punch.eot?") format("eot"), url("fruit-punch.woff") format("woff"), url("fruit-punch.ttf") format("truetype"), url("fruit-punch.svg#Fruit-Punch") format("svg");
+  font-weight: normal;
+  font-style: normal;
+} */

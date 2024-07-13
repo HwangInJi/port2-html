@@ -1,0 +1,47 @@
+:root {
+  --fontP: "fruit-punch";
+  --fontJ: "BMJUA";
+  --fontF: "Fredoka";
+  --fontA: "Abel";
+  --fontI: "Iropke Batang";
+  --fontB: "Bangers";
+  --fontL: "Ballet";
+  --fontC: "Chewy";
+  --fontU: "Cormorant Upright";
+  --fontD: "DungGeunMo";
+  --fontT: "LOTTERIACHAB";
+
+  --mainColor: #8cf4a1;
+
+  --white: #fff;
+  --white100: #fff;
+  --white200: #e1e1e1;
+  --white300: #dcdcdc;
+  --white400: #ddd;
+  --white500: #fff;
+  --white600: #b2b2b2;
+
+  --black: #000;
+  --black100: #111;
+  --black200: #222;
+  --black300: #333;
+  --black400: #444;
+  --black500: #555;
+  --black600: #666;
+  --black700: #777;
+
+  /* 기본 폰트 설정 */
+  font-family: var(--fontI);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  font-style: normal;
+  /* 아이폰 가로 모드에서 글씨 확대 금지 */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 14px;
+  }
+}
