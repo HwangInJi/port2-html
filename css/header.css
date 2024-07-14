@@ -163,7 +163,7 @@
     animation: none;
 }
 
-.box--4 .box__title--top:hover {
+.box--4 .box_햣 _title--top:hover {
     transform: scale(1.6) translateY(-1vw);
 }
 
