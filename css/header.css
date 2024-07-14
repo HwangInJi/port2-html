@@ -178,12 +178,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .box__content {
-        font-size: 6vw; /* 모바일에서 더 큰 폰트 크기 */
-    }
-}
-
 @media (max-width:1940px){
     .header.container{
         .header_top{
