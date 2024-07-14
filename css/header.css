@@ -131,7 +131,7 @@
 .box--4 span {
     font-family: var(--fontP);
     font-size: inherit;
-    /* animation: text var(--time) linear infinite running; */
+    animation: text var(--time) linear infinite running;
     transition: all 0.3s ease-out;
 }
 
@@ -163,7 +163,7 @@
     animation: none;
 }
 
-.box--4 .box_햣 _title--top:hover {
+.box--4 .box__title--top:hover {
     transform: scale(1.6) translateY(-1vw);
 }
 
