@@ -7,4 +7,7 @@
 @import "commons.css";
 
 /* 섹션 설정 */
-@import "header.css";
+@import "header.css"; // 헤더 상단 메뉴
+
+/* 애니메이션 */
+@import "animate.css";

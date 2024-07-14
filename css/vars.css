@@ -30,6 +30,18 @@
   --black600: #666;
   --black700: #777;
 
+  --color-black: black;
+  --color-white: white;
+  --color-yellow: yellow;
+  --color-grey: #e8e8e8;
+  --time: 4s;
+  --time-s: 0.3s;
+  --vw: 60vw;
+
+  @media (max-width: 768px) {
+    --size-height: 54px;
+  }
+
   /* 기본 폰트 설정 */
   font-family: var(--fontI);
   font-size: 1rem;
