@@ -34,7 +34,7 @@
 
     <div class="header_main">
       <a class="box box--4">
-          <div class="box__content">
+          <div class="box__content" id="boxContent">
               HELLOWI
               <span>WELCOMETO</span>
               INJIS
@@ -157,6 +157,27 @@
   // top_deco 클릭 이벤트 리스너 추가
   topDeco.addEventListener('click', startAnimation);
   });
+
+  // 헤더 텍스트 애니메이션
+  document.addEventListener('DOMContentLoaded', function() {
+  const boxContent = document.getElementById('boxContent');
+  const hoverSpans = boxContent.querySelectorAll('.box__title, .box__title--top');
+  const allSpans = boxContent.querySelectorAll('span');
+
+  hoverSpans.forEach(span => {
+    span.addEventListener('mouseenter', () => {
+      allSpans.forEach(s => {
+        s.style.animationPlayState = 'paused';
+      });
+    });
+
+    span.addEventListener('mouseleave', () => {
+      allSpans.forEach(s => {
+        s.style.animationPlayState = 'running';
+      });
+    });
+  });
+});
 </script>
 
 

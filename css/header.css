@@ -82,7 +82,7 @@
 
 .header_main {
     width: 100%;
-    height: 92vh; /* 뷰포트 높이의 92%로 설정 */
+    height: 92vh;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -94,7 +94,7 @@
     cursor: pointer;
     position: relative;
     width: 100%;
-    height: 100%; /* 높이를 100%로 설정 */
+    height: 100%;
     margin: 0;
     overflow: hidden;
 }
@@ -122,7 +122,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-size: 4.3vw; /* 뷰포트 너비에 따라 조절 */
+    font-size: 4.3vw;
     line-height: 1.2;
     text-align: center;
     font-family: var(--fontP);
@@ -131,7 +131,8 @@
 .box--4 span {
     font-family: var(--fontP);
     font-size: inherit;
-    animation: text var(--time) linear infinite running;
+    /* animation: text var(--time) linear infinite running; */
+    transition: all 0.3s ease-out;
 }
 
 .box--4 span:nth-child(2n+1) {
@@ -142,19 +143,14 @@
     animation-delay: calc(var(--time) / 2);
 }
 
-.box--4:hover {
-    text-shadow:
-        -1px 0 0 var(--color-grey),
-        0 -1px 0 var(--color-grey),
-        1px 0 0 var(--color-grey),
-        0 1px 0 var(--color-grey);
+.box--4 .box__title,
+.box--4 .box__title--top {
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
-.box--4:hover span {
-    animation: none;
-}
-
-.box--4:hover .box__title {
+.box--4 .box__title:hover,
+.box--4 .box__title--top:hover {
     z-index: 2;
     opacity: 1;
     text-shadow:
@@ -164,9 +160,10 @@
         0 1px 0 var(--mainColor);
     transform: scale(1.6);
     color: var(--mainColor);
+    animation: none;
 }
 
-.box--4:hover .box__title--top {
+.box--4 .box__title--top:hover {
     transform: scale(1.6) translateY(-1vw);
 }
 
