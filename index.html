@@ -1,185 +1,188 @@
 <!DOCTYPE html>
 <html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORT2</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PORT2</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
 
-  <link rel="stylesheet" href="/css/style.css" />
-</head>
-
-<body>
-<div id="wrap">
-  <div class="header container">
-    <div class="header_top">
-      <div class="top_p">PORT2</div>
-      <img src="/img/run.svg" alt="logo" class="top_logo">
-      <div class="top_border">
-        <div class="border_line"></div>
-        <p>20s</p>
-      </div>
-      <div class="top_msg">
-        <img src="/img/line1.svg" alt="line" class="top_line1">
-        <p class="top_msgP" id="marqueeText">숨겨진 단어를 찾아보세요!</p>
-        <img src="/img/line2.svg" alt="line" class="top_line2">
-      </div>
-      <div class="top_deco">
-        <img src="/img/deco.svg" alt="deco" class="top_decoimg">
-      </div>
-      <div class="top_menu">
-        <button class="menu_btn">메뉴</button>
-      </div>
-    </div>
-
-    <div class="header_main">
-      <a class="box box--4">
-          <div class="box__content" id="boxContent">
-            WELCOME
-            <span class="box__title">PORTFOLIO</span>
-            VISIT
-            <span>ENJOYTHIS</span>
-            GREAT
-            <span>DISCOVER</span>
-            SPACETOS
-            <span>ARTWORKER</span>
-            HELLOWSTO
-            <span class="box__title box__title--top">ABOUTME</span>
-            ARTZONE
-            <span>HELLOTO</span>
-            VIEWART
-            <span>WELCOME</span>
-            <span class="box__title">HELLOW</span>
-            SHOWCASEIN
-            <span>EXPLORES</span>
-            DESIGN
-            <span class="box__title">COMMENTS</span>
-            EXHIBITS
-            <span>GALLERY</span>
-            <span class="box__title box__title--top">WELCOME</span>
-            DISCOVERLYS
-            ARTSY
-            <span>ENJOYTHE</span>
-            SALUTET
-            <span class="box__title box__title--top">PUZZLEGAME</span>
-            CREAT
-            <span>ARTWORK</span>
-            <span class="box__title">THANKYOU</span>
-            <span>DISCOVER</span>
-            HELLOMY
+  <body>
+    <div id="wrap">
+      <div class="header container">
+        <div class="header_top">
+          <div class="top_p">PORT2</div>
+          <img src="/img/run.svg" alt="logo" class="top_logo" />
+          <div class="top_border">
+            <div class="border_line"></div>
+            <p>20s</p>
           </div>
-      </a>
+          <div class="top_msg">
+            <img src="/img/line1.svg" alt="line" class="top_line1" />
+            <p class="top_msgP" id="marqueeText">숨겨진 단어를 찾아보세요!</p>
+            <img src="/img/line2.svg" alt="line" class="top_line2" />
+          </div>
+          <div class="top_deco">
+            <img src="/img/deco.svg" alt="deco" class="top_decoimg" />
+          </div>
+          <div class="top_menu">
+            <button class="menu_btn">메뉴</button>
+            <!-- <ul>
+              <li><a href="#">ABOUT ME</a></li>
+              <li><a href="#">PORTFOLIO</a></li>
+              <li><a href="#">COMMENT</a></li>
+            </ul> -->
+          </div>
+        </div>
+
+        <div class="header_main">
+          <a class="box box--4">
+            <div class="box__content" id="boxContent">
+              WELCOME
+              <span class="box__title">PORTFOLIO</span>
+              VISIT
+              <span>ENJOYTHIS</span>
+              GREAT
+              <span>DISCOVER</span>
+              SPACETOS
+              <span>ARTWORKER</span>
+              HELLOWSTO
+              <span class="box__title box__title--top">ABOUTME</span>
+              ARTZONE
+              <span>HELLOTO</span>
+              VIEWART
+              <span>WELCOME</span>
+              <span class="box__title">HELLOW</span>
+              SHOWCASEIN
+              <span>EXPLORES</span>
+              DESIGN
+              <span class="box__title">COMMENTS</span>
+              EXHIBITS
+              <span>GALLERY</span>
+              <span class="box__title box__title--top">WELCOME</span>
+              DISCOVERLYS ARTSY
+              <span>ENJOYTHE</span>
+              SALUTET
+              <span class="box__title box__title--top">PUZZLEGAME</span>
+              CREAT
+              <span>ARTWORK</span>
+              <span class="box__title">THANKYOU</span>
+              <span>DISCOVER</span>
+              HELLOMY
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</body>
+  </body>
 
-<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-<script>
-  const lenis = new Lenis();
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis();
 
-  lenis.on("scroll", (e) => {
-    console.log(e);
-  });
+    lenis.on("scroll", (e) => {
+      console.log(e);
+    });
 
-  function raf(time) {
-    lenis.raf(time);
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
     requestAnimationFrame(raf);
-  }
+  </script>
 
-  requestAnimationFrame(raf);
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    // 텍스트 흘러가듯이 이동
+    document.addEventListener("DOMContentLoaded", function () {
+      const marqueeText = document.getElementById("marqueeText");
+      const marqueeContainer = marqueeText.parentElement;
+      const speed = 2; // 글자 이동 속도 (높을수록 빠름)
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-<script>
-  // 텍스트 흘러가듯이 이동
-  document.addEventListener("DOMContentLoaded", function () {
-    const marqueeText = document.getElementById("marqueeText");
-    const marqueeContainer = marqueeText.parentElement;
-    const speed = 2; // 글자 이동 속도 (높을수록 빠름)
+      function startMarquee() {
+        const containerWidth = marqueeContainer.offsetWidth;
+        const textWidth = marqueeText.offsetWidth;
+        let currentPos = containerWidth;
 
-    function startMarquee() {
-      const containerWidth = marqueeContainer.offsetWidth;
-      const textWidth = marqueeText.offsetWidth;
-      let currentPos = containerWidth;
-
-      function animate() {
-        currentPos -= speed;
-        if (currentPos < -textWidth) {
-          currentPos = containerWidth;
+        function animate() {
+          currentPos -= speed;
+          if (currentPos < -textWidth) {
+            currentPos = containerWidth;
+          }
+          marqueeText.style.transform = `translateX(${currentPos}px)`;
+          requestAnimationFrame(animate);
         }
-        marqueeText.style.transform = `translateX(${currentPos}px)`;
-        requestAnimationFrame(animate);
+
+        animate();
       }
 
-      animate();
-    }
+      startMarquee();
 
-    startMarquee();
+      // top_border 애니메이션 추가
+      const borderLine = document.querySelector(".top_border .border_line");
+      const timerText = document.querySelector(".top_border > p");
+      const topDeco = document.querySelector(".top_deco");
+      let timeLeft = 20;
+      let borderAnimation;
 
-  // top_border 애니메이션 추가
-  const borderLine = document.querySelector('.top_border .border_line');
-  const timerText = document.querySelector('.top_border > p');
-  const topDeco = document.querySelector('.top_deco');
-  let timeLeft = 20;
-  let borderAnimation;
+      function startAnimation() {
+        // 이전 애니메이션이 있다면 중지
+        if (borderAnimation) {
+          borderAnimation.kill();
+        }
 
-  function startAnimation() {
-    // 이전 애니메이션이 있다면 중지
-    if (borderAnimation) {
-      borderAnimation.kill();
-    }
+        // 초기 상태로 리셋
+        gsap.set(borderLine, { width: "100%" });
+        timeLeft = 20;
+        timerText.textContent = "20s";
 
-    // 초기 상태로 리셋
-    gsap.set(borderLine, { width: '100%' });
-    timeLeft = 20;
-    timerText.textContent = '20s';
-
-    // 새로운 애니메이션 시작
-    borderAnimation = gsap.to(borderLine, {
-      duration: 20,
-      width: 0,
-      ease: 'linear',
-      onUpdate: updateTimer,
-      onComplete: () => {
-        timerText.textContent = '0s';
+        // 새로운 애니메이션 시작
+        borderAnimation = gsap.to(borderLine, {
+          duration: 20,
+          width: 0,
+          ease: "linear",
+          onUpdate: updateTimer,
+          onComplete: () => {
+            timerText.textContent = "0s";
+          },
+        });
       }
+
+      function updateTimer() {
+        timeLeft = Math.max(0, Math.ceil(20 - this.time())); // 남은 시간 계산
+        timerText.textContent = timeLeft + "s";
+      }
+
+      // 초기 애니메이션 시작
+      startAnimation();
+
+      // top_deco 클릭 이벤트 리스너 추가
+      topDeco.addEventListener("click", startAnimation);
     });
-  }
 
-  function updateTimer() {
-    timeLeft = Math.max(0, Math.ceil(20 - this.time())); // 남은 시간 계산
-    timerText.textContent = timeLeft + 's';
-  }
+    // 헤더 텍스트 애니메이션
+    document.addEventListener("DOMContentLoaded", function () {
+      const boxContent = document.getElementById("boxContent");
+      const hoverSpans = boxContent.querySelectorAll(
+        ".box__title, .box__title--top"
+      );
+      const allSpans = boxContent.querySelectorAll("span");
 
-  // 초기 애니메이션 시작
-  startAnimation();
+      hoverSpans.forEach((span) => {
+        span.addEventListener("mouseenter", () => {
+          allSpans.forEach((s) => {
+            s.style.animationPlayState = "paused";
+          });
+        });
 
-  // top_deco 클릭 이벤트 리스너 추가
-  topDeco.addEventListener('click', startAnimation);
-  });
-
-  // 헤더 텍스트 애니메이션
-  document.addEventListener('DOMContentLoaded', function() {
-  const boxContent = document.getElementById('boxContent');
-  const hoverSpans = boxContent.querySelectorAll('.box__title, .box__title--top');
-  const allSpans = boxContent.querySelectorAll('span');
-
-  hoverSpans.forEach(span => {
-    span.addEventListener('mouseenter', () => {
-      allSpans.forEach(s => {
-        s.style.animationPlayState = 'paused';
+        span.addEventListener("mouseleave", () => {
+          allSpans.forEach((s) => {
+            s.style.animationPlayState = "running";
+          });
+        });
       });
     });
-
-    span.addEventListener('mouseleave', () => {
-      allSpans.forEach(s => {
-        s.style.animationPlayState = 'running';
-      });
-    });
-  });
-});
-</script>
-
-
+  </script>
 </html>
