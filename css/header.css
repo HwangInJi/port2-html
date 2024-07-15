@@ -14,6 +14,8 @@
       color: var(--mainColor);
       font-size: 2.5rem;
       line-height: 1;
+      font-family: var(--fontF);
+      font-weight: 500;
     }
 
     .top_logo {
